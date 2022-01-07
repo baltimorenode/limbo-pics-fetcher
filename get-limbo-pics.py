@@ -3,6 +3,7 @@
 # jnm 20210915
 import cv2
 import os
+import datetime
 import requests
 import tempfile
 from wyze_sdk import Client
@@ -65,6 +66,7 @@ html_output = (
     'to members [at] discuss.baltimorenode.org instead. Do not assume that '
     'anything is safe until you receive acknowledgement from a member. Better '
     'yet: take your stuff home or put it on your member shelf!</p>'
+    f'<p><small>Last updated: {datetime.datetime.now()}</small></p>'
 )
 for image_file in image_files:
     html_output += f'<a href="{image_file}"><img src="{image_file}"></a>'
