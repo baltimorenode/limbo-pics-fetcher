@@ -4,6 +4,7 @@
 import cv2
 import os
 import datetime
+import logging
 import requests
 import tempfile
 from wyze_sdk import Client
@@ -23,7 +24,7 @@ def get_latest_event_video_url():
     event = events[0]
     videos = [f for f in event.files if f.type == EventFileType.VIDEO]
     if len(videos) != 1:
-        raise RuntimeError(
+        logging.warning(
             f'Expected 1 video but received {len(videos)} instead!'
         )
 
