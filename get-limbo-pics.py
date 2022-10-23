@@ -70,7 +70,8 @@ html_output = (
     'to members [at] discuss.baltimorenode.org instead. Do not assume that '
     'anything is safe until you receive acknowledgement from a member. Better '
     'yet: take your stuff home or put it on your member shelf!</p>'
-    f'<p><small>Last updated: {datetime.datetime.now(tz=TIMEZONE)}</small></p>'
+    f'<p><small>Last updated: {datetime.datetime.now(tz=TIMEZONE)}<br>'
+    'Image timestamps will be older if no motion was detected</small></p>'
 )
 for image_file in image_files:
     html_output += f'<a href="{image_file}"><img src="{image_file}"></a>'
