@@ -5,6 +5,7 @@ import cv2
 import os
 import datetime
 import logging
+import pytz
 import requests
 import tempfile
 from wyze_sdk import Client
@@ -14,6 +15,8 @@ client = Client(
     email=os.environ['WYZE_EMAIL'], password=os.environ['WYZE_PASSWORD']
 )
 device_mac = os.environ['WYZE_DEVICE_MAC']
+
+TIMEZONE = pytz.timezone('US/Eastern')
 
 
 def get_latest_event_video_url():
@@ -67,7 +70,7 @@ html_output = (
     'to members [at] discuss.baltimorenode.org instead. Do not assume that '
     'anything is safe until you receive acknowledgement from a member. Better '
     'yet: take your stuff home or put it on your member shelf!</p>'
-    f'<p><small>Last updated: {datetime.datetime.now()}</small></p>'
+    f'<p><small>Last updated: {datetime.datetime.now(tz=TIMEZONE)}</small></p>'
 )
 for image_file in image_files:
     html_output += f'<a href="{image_file}"><img src="{image_file}"></a>'
