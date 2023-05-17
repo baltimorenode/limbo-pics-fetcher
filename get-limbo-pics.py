@@ -52,7 +52,7 @@ html_output = f'''
     <div style="display: flex; flex-flow: column; width: 95%; height: 95%; position: absolute;">
       <div style="flex-shrink: 0;">
         <h1>This stuff will be thrown away!</h1>
-        <p>⚠️ If you <a href="https://discuss.baltimorenode.org/t/limbo-cam/5945">cannot see the video</a>, try using Firefox.</p>
+        <p>⚠️ If you <a href="https://discuss.baltimorenode.org/t/limbo-cam/5945">cannot see the video</a>, try <strike>using Firefox</strike> downloading the video and playing it in VLC 🤦.</p>
         <p>
           Please post on <a href="https://discuss.baltimorenode.org/">https://discuss.baltimorenode.org/</a> <em>right now</em> if something here belongs to you. If you don't have an account there, send an email to members [at]
           discuss.baltimorenode.org instead. Do not assume that anything is safe until you receive acknowledgement from a member. Better yet: take your stuff home or put it on your member shelf!
